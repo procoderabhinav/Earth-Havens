@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+        body {
+            background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+    margin: 0;
+    padding: 0;
+    height: 3%vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000080;
+    font-family: 'Avant Garde Md BT', sans-serif;
+    font-size: 16px;;
+        }
+    #photo-container {
+      position: relative;
+    }
+
+    #photo-container img {
+      width: 100%; /* Make the image fill its container */
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #888888;
+    }
+    #pointescription{font-style:italic;}
+   h1 {
+    font-family: 'Kaufmann Bd BT', cursive; /* Change 'body' to the selector of your choice */
+    font-size: 28px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+</style>
+	
+	<title>SDG15</title>
+</head>
+<body>
+	<ul>
+               <h3 align="right"><a href="index.html">Home</a></h3>
+
+           </ul>
+	 <div id="photo-container">
+    <img src="goal15.png" alt="Your Photo" width="300" height="300">
+  </div>
+<h1 align="center">SDG - 15 & Indian Traditions</h1><br>
+<table>	
+
+<tr>
+  <td><img src="SDG 15 IMAGES\Sustainable Living.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Nature Walks.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Wildlife Conservation.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Waste Management.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Community Gardens.jpg" align="center" height="200" width="250">
+  </td>
+
+</tr>
+
+
+ <tr>
+ <td><h2 align="center"><p id="pointescription"> **Sustainable Living**</h2>:  Adopt sustainable living practices such as reducing waste, conserving water, and minimising energy consumption to reduce your ecological footprint.</p>
+<br></h2></td>
+ <td><h2 align="center"> **Nature Walks**</h2>:<p id="pointescription"> Explore and appreciate the natural world by taking regular nature walks or hikes. This can help foster a deeper connection with the environment and encourage conservation.</p>
+<br><br></br></p> 
+<td><h2 align="center">**Wildlife Conservation**</h2>: <p id="pointescription">Learn about the importance of wildlife conservation in India. Support organisations and initiatives dedicated to protecting endangered species and their habitats.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Waste Management**</h2>:<p id="pointescription"> Practise responsible waste disposal and recycling. Reduce plastic usage and promote the recycling of materials to prevent pollution and land degradation.</p>
+<br><br></br></td>
+<td><h2 align="center"> **Community Gardens**</h2>: <p id="pointescription">Get involved in community gardening projects or create your own garden space to grow native plants and create a habitat for local wildlife.
+</p>
+<br><br></br></td>
+</tr>
+<tr>
+  <td><img src="SDG 15 IMAGES\Biodiversity Awareness.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Promote Sustainable Agriculture.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES\Water Conservation.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 15 IMAGES/dfg.jpg" align="center" height="200" width="250">
+  </td>
+
+
+
+</tr>
+
+
+ <td><h2 align="center">**Biodiversity Awareness**</h2>: <p id="pointescription">Educate yourself and others about India's rich biodiversity. Learn about the various plant and animal species native to your region and their ecological significance.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Promote Sustainable Agriculture**</h2>: <p id="pointescription"> Encourage the use of sustainable farming practices, such as organic farming and crop rotation, to maintain healthy soils and reduce land degradation.</p>
+<br><br></br></td>
+ <td><h2 align="center">**Water Conservation**</h2>: <p id="pointescription">Conserve water resources by fixing leaks, using water-saving appliances, and advocating for responsible water management practices in your community.</p>
+<br><br></br></td>
+<td> <h2 align="center"> **Environmental Advocacy**</h2>:<p id="pointescription">  Become an advocate for environmental protection by joining or starting youth-led environmental groups. Raise awareness about the importance of preserving India's natural heritage.</p>
+<br><br></br></td>
+</tr>
+</table>
+<h2>Dear friends,what action did you do today to achieve SDG today. Cooment here. Let's share our thoughts..</h2>
+<div class="comment-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="button" onclick="addComment()">Add Comment</button>
+  </form>
+</div>        
+<script>
+  function addComment() {
+      var name = document.getElementById('name').value;
+      var commentText = document.getElementById('comment').value;
+  
+      if (name && commentText) {
+          var commentContainer = document.getElementById('comments-container');
+  
+          var commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+  
+          var commentContent = document.createElement('p');
+          commentContent.textContent = name + ': ' + commentText;
+  
+          commentDiv.appendChild(commentContent);
+          commentContainer.appendChild(commentDiv);
+  
+          // Clear the form fields after adding a comment
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      } else {
+          alert('Please enter both name and comment.');
+      }
+  }
+  
+      </script>
+</body>
+</html>

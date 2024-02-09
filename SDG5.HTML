@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+        body {
+            background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+    margin: 0;
+    padding: 0;
+    height: 3%vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000080;
+    font-family: 'Avant Garde Md BT', sans-serif;
+    font-size: 16px;;
+        }
+    #photo-container {
+      position: relative;
+    }
+
+    #photo-container img {
+      width: 100%; /* Make the image fill its container */
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #888888;
+    }
+    #pointescription{font-style:italic;}
+   h1 {
+    font-family: 'Kaufmann Bd BT', cursive; /* Change 'body' to the selector of your choice */
+    font-size: 28px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+</style>
+	
+	<title>SDG5</title>
+</head>
+<body>
+	<ul>
+               <h3 align="right"><a href="index.html">Home</a></h3>
+
+           </ul>
+	 <div id="photo-container">
+    <img src="goal5.png" alt="Your Photo" width="300" height="300">
+  </div>
+<h1 align="center">SDG - 5 & Indian Traditions</h1><br>
+<table>	
+
+<tr>
+  <td><img src="SDG 5 IMAGES\Respect for Elders.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Educational Support.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Participation in Household Chores.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Challenge Stereotypes.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES/Support Women_s Entrepreneurship.jpg" align="center" height="200" width="250"></td>
+
+</tr>
+
+ <tr>
+ 	<td>
+ 	<h2 align="center"> **Respect for Elders**</h2>: 
+ <p id="pointescription">Indian traditions emphasise respect for elders, including female family members. Showing respect to women in your family sets a positive example for gender equality.
+<br><br></br></p></td>
+ <td><h2 align="center">**Educational Support**</h2>:
+ <p id="pointescription"> Encourage girls in your community to pursue education and help them with their studies if needed. Education is a powerful tool for empowering girls and women.</p>
+<br></h2></td>
+ <td><h2 align="center"> **Participation in Household Chores**</h2>:<p id="pointescription">  Help with household chores without gender bias. Promote the idea that everyone, regardless of gender, should contribute to household responsibilities.</p>
+<br><br></br></p> 
+<td><h2 align="center">**Challenge Stereotypes**</h2>: <p id="pointescription">Speak out against gender stereotypes and biases when you encounter them. Promote the idea that girls can excel in any field they choose.
+</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Support Women's Entrepreneurship**</h2>:<p id="pointescription"> Encourage and support women in your community who want to start their businesses or initiatives. Offer assistance or guidance if poss</p>
+<br><br></br></td></tr>
+
+<tr>
+  <td><img src="SDG 5 IMAGES/Celebrate Women_s Achievements.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Promote Gender Sensitivity.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Join Gender Equality Initiatives.jpg" align="center" height="200" width="250"></td>
+
+  <td><img src="SDG 5 IMAGES\Respect Personal Boundaries.jpg" align="center" height="200" width="250"></td>
+
+ 
+
+</tr>
+
+ <tr><td><h2 align="center"> **Celebrate Women's Achievements**</h2>: <p id="pointescription">Recognize and celebrate the achievements of women and girls in your community, whether it's in academics, sports, or other fields.
+</p>
+<br><br></br></td>
+ <td><h2 align="center">**Promote Gender Sensitivity**</h2>: <p id="pointescription">Advocate for gender sensitivity and inclusion in school curricula and extracurricular activities. Encourage your school to address gender-related issues.
+</p>
+<br><br></br></td>
+ <td><h2 align="center">**Join Gender Equality Initiatives**</h2>: <p id="pointescription">Participate in or start gender equality clubs or initiatives in your school or community. These groups can raise awareness and drive positive change.
+</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Respect Personal Boundaries**</h2>: <p id="pointescription">Promote the importance of consent, personal boundaries, and respectful behaviour in relationships among your peers. Help create a safe and respectful environmen</p>
+<br><br></br></td>
+
+</tr>
+</table>
+<h2>Dear friends,what action did you do today to achieve SDG . Comment here. Let's share our thoughts..</h2>
+<div class="comment-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="button" onclick="addComment()">Add Comment</button>
+  </form>
+</div>        
+<script>
+  function addComment() {
+      var name = document.getElementById('name').value;
+      var commentText = document.getElementById('comment').value;
+  
+      if (name && commentText) {
+          var commentContainer = document.getElementById('comments-container');
+  
+          var commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+  
+          var commentContent = document.createElement('p');
+          commentContent.textContent = name + ': ' + commentText;
+  
+          commentDiv.appendChild(commentContent);
+          commentContainer.appendChild(commentDiv);
+  
+          // Clear the form fields after adding a comment
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      } else {
+          alert('Please enter both name and comment.');
+      }
+  }
+  
+      </script>
+</body>
+</html>

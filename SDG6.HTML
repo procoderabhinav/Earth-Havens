@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+        body {
+            background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+    margin: 0;
+    padding: 0;
+    height: 3%vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000080;
+    font-family: 'Avant Garde Md BT', sans-serif;
+    font-size: 16px;;
+        }
+    #photo-container {
+      position: relative;
+    }
+
+    #photo-container img {
+      width: 100%; /* Make the image fill its container */
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #888888;
+    }
+    #pointescription{font-style:italic;}
+   h1 {
+    font-family: 'Kaufmann Bd BT', cursive; /* Change 'body' to the selector of your choice */
+    font-size: 28px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+</style>
+	
+	<title>SDG6</title>
+</head>
+<body>
+	<ul>
+               <h3 align="right"><a href="index.html">Home</a></h3>
+
+           </ul>
+	 <div id="photo-container">
+    <img src="goal6.png" alt="Your Photo" width="300" height="300">
+  </div>
+<h1 align="center">SDG - 6 & Indian Traditions</h1><br>
+<table>
+
+<tr>
+  <td><img src="SDG 6 IMAGES\Water Conservation.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\Rainwater Harvesting.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\River Cleanliness.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\Support NGOs.jpg" align="center" height="200" width="250">
+  </td>
+
+
+</tr>
+
+ <tr>
+ 	<td>
+ 	<h2 align="center"> **Water Conservation**</h2>: 
+ <p id="pointescription">Embrace the traditional practice of conserving water in everyday life. Turn off taps when not in use, fix leaks promptly, and avoid wasteful water practices.
+<br><br></br></p></td>
+ <td><h2 align="center"><p id="pointescription"> **Rainwater Harvesting**</h2>: Learn about and promote rainwater harvesting techniques in your community. Collecting rainwater can help recharge groundwater and provide an additional source of clean water.</p>
+<br><br></br></p></td>
+<td><h2 align="center">**River Cleanliness**</h2>: <p id="pointescription">participate in or organise river cleaning drives to prevent pollution and maintain the cleanliness of water bodies.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Support NGOs**</h2>:<p id="pointescription"> Get involved with local NGOs and organisations working on water and sanitation projects. Your time and effort can make a difference.</p>
+<br><br></br></td>
+
+<tr>
+  <td><img src="SDG 6 IMAGES\Community Wells.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\Promote Hygiene.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\Advocate for Sanitation.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 6 IMAGES\Philanthropy.jpg" align="center" height="200" width="250">
+  </td>
+  
+  <td><img src="SDG 6 IMAGES\Reduce Plastic Pollution.jpg" align="center" height="200" width="250">
+  </td>
+
+</tr>
+
+ <tr><td><h2 align="center"> **Community Wells**</h2>: <p id="pointescription">f your community has traditional wells, take part in efforts to restore and maintain them. These wells often serve as valuable sources of clean water.</p>
+<br></td>
+ <td><h2 align="center">**Promote Hygiene**</h2>: <p id="pointescription">Encourage proper hygiene practices, such as regular handwashing, in your school and community to prevent waterborne diseases.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Advocate for Sanitation**</h2>: <p id="pointescription">Raise awareness about the importance of sanitation facilities, especially in rural areas, and support initiatives to improve access to clean and safe toilets.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Philanthropy**</h2>: <p id="pointescription">Cultivate a spirit of giving and philanthropy. Even small contributions can make a difference in the lives of those in need, and philanthropy is a key element of Indian traditions.</p>
+<br><br></br></td>
+<td> <h2 align="center"> ***Reduce Plastic Pollution**</h2>:<p id="pointescription"> Recognize the connection between plastic pollution and water contamination. Reduce single-use plastic consumption and participate in plastic cleanup drives near water bodies.
+</p>
+<br><br></br></td>
+</tr>
+</table>
+<h2>Dear friends,what action did you do today to achieve SDG .Comment here. Let's share our thoughts..</h2>
+<div class="comment-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="button" onclick="addComment()">Add Comment</button>
+  </form>
+</div>          
+<script>
+  function addComment() {
+      var name = document.getElementById('name').value;
+      var commentText = document.getElementById('comment').value;
+  
+      if (name && commentText) {
+          var commentContainer = document.getElementById('comments-container');
+  
+          var commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+  
+          var commentContent = document.createElement('p');
+          commentContent.textContent = name + ': ' + commentText;
+  
+          commentDiv.appendChild(commentContent);
+          commentContainer.appendChild(commentDiv);
+  
+          // Clear the form fields after adding a comment
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      } else {
+          alert('Please enter both name and comment.');
+      }
+  }
+  
+      </script>
+</body>
+</html>

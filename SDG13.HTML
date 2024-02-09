@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+        body {
+            background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+    margin: 0;
+    padding: 0;
+    height: 3%vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000080;
+    font-family: 'Avant Garde Md BT', sans-serif;
+    font-size: 16px;;
+        }
+    #photo-container {
+      position: relative;
+    }
+
+    #photo-container img {
+      width: 100%; /* Make the image fill its container */
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #888888;
+    }
+    #pointescription{font-style:italic;}
+   h1 {
+    font-family: 'Kaufmann Bd BT', cursive; /* Change 'body' to the selector of your choice */
+    font-size: 28px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+</style>
+	
+	<title>SDG13</title>
+</head>
+<body>
+	<ul>
+               <h3 align="right"><a href="index.html">Home</a></h3>
+
+           </ul>
+	 <div id="photo-container">
+    <img src="goal13.png" alt="Your Photo" width="300" height="300">
+  </div>
+<h1 align="center">SDG - 13 & Indian Traditions</h1><br>
+<table>	
+
+<tr>
+  <td><img src="SDG 13 IMAGES\Reduce Water Usage.JPG" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Plant Trees,JPG.jfif" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Promote Vegetarianism.JPG" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Avoid Single-Use Plastics.JPG" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Bicycle or Walk.JPG" align="center" height="200" width="250">
+  </td>
+
+</tr>
+
+
+ <tr>
+ 	<td>
+ 	<h2 align="center"> **Reduce Water Usage**</h2>: 
+ <p id="pointescription">Embrace the Indian tradition of conserving water by using it judiciously. Fix any leaks, turn off taps when not in use, and practise rainwater harvesting if possible.
+<br><br></br></p></td>
+ <td><h2 align="center"> **Plant Trees** <p id="pointescription">Hindu traditions have long revered trees. Planting trees or participating in tree-planting drives can help combat climate change by absorbing carbon dioxide.</p>
+<br></h2></td>
+ <td><h2 align="center"> **Promote Vegetarianism**</h2>:<p id="pointescription">Consider adopting a vegetarian diet or reducing meat consumption. Many Indian traditions promote vegetarianism as a way to reduce greenhouse gas emissions associated with livestock farming.</p>
+<br><br></br></p> 
+<td><h2 align="center">**Avoid Single-Use Plastics*</h2>: <p id="pointescription"> Indian traditions often emphasise the importance of respecting and protecting the environment. Avoid single-use plastics like plastic bags and utensils to reduce pollution.</p>
+<br><br></br></td>
+ <td><h2 align="center">**Bicycle or Walk**</h2>:<p id="pointescription"> Emulate the traditional practice of walking or cycling for short distances instead of relying on motorised transport. This reduces carbon emissions.</p>
+<br><br></br></td></tr>
+
+<tr>
+  <td><img src="SDG 13 IMAGES\Conserve Energy.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Learn About Indigenous Knowledge.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Participate in Clean-up Drives.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 13 IMAGES\Raise Awareness.jpg" align="center" height="200" width="250">
+  </td>
+
+ 
+
+</tr>
+
+ <tr><td><h2 align="center"> **Conserve Energy**</h2>: <p id="pointescription"> Implement energy-saving habits at home, such as turning off lights and appliances when not in use. Use energy-efficient bulbs and appliances to reduce electricity consumption.</p>
+<br><br></br></td>
+ <td><h2 align="center">**Learn About Indigenous Knowledge**</h2>: <p id="pointescription">Explore traditional Indian knowledge related to sustainable agriculture and natural resource management. This can inspire eco-friendly practices.</p>
+<br><br></br></td>
+ <td><h2 align="center">**Participate in Clean-up Drives**</h2>: <p id="pointescription">Join local clean-up initiatives or organise one in your community to clean rivers, beaches, or public spaces. This helps preserve natural environments.</p>
+<br><br></br></td>
+ <td><h2 align="center">**Raise Awareness**</h2>: <p id="pointescription">Use social media and community gatherings to raise awareness about climate change and its impacts. Share information and encourage others to take action.</p>
+<br><br></br></td>
+
+</tr>
+</table>
+<h2>Dear friends,what action did you do today to achieve SDG today. Cooment here. Let's share our thoughts..</h2>
+<div class="comment-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="button" onclick="addComment()">Add Comment</button>
+  </form>
+</div>          
+<script>
+  function addComment() {
+      var name = document.getElementById('name').value;
+      var commentText = document.getElementById('comment').value;
+  
+      if (name && commentText) {
+          var commentContainer = document.getElementById('comments-container');
+  
+          var commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+  
+          var commentContent = document.createElement('p');
+          commentContent.textContent = name + ': ' + commentText;
+  
+          commentDiv.appendChild(commentContent);
+          commentContainer.appendChild(commentDiv);
+  
+          // Clear the form fields after adding a comment
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      } else {
+          alert('Please enter both name and comment.');
+      }
+  }
+  
+      </script>
+</body>
+</html>

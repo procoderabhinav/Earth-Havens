@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+        body {
+            background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+    margin: 0;
+    padding: 0;
+    height: 3%vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000080;
+    font-family: 'Avant Garde Md BT', sans-serif;
+    font-size: 16px;;
+        }
+    #photo-container {
+      position: relative;
+    }
+
+    #photo-container img {
+      width: 100%; /* Make the image fill its container */
+      height: auto;
+      display: block;
+      border: 2px solid #ccc;
+      padding: 10px;
+      box-shadow: 5px 5px 15px #888888;
+    }
+    #pointescription{font-style:italic;}
+   h1 {
+    font-family: 'Kaufmann Bd BT', cursive; /* Change 'body' to the selector of your choice */
+    font-size: 28px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.comment-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+</style>
+	
+	<title>SDG17</title>
+</head>
+<body>
+	<ul>
+               <h3 align="right"><a href="index.html">Home</a></h3>
+
+           </ul>
+	 <div id="photo-container">
+    <img src="goal17.png" alt="Your Photo" width="300" height="300">
+  </div>
+<h1 align="center">SDG - 17 & Indian Traditions</h1><br>
+<table>	
+
+<tr>
+  <td><img src="SDG 17 IMAGES\Community Engagement.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Cultural Exchange.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Non-Violence (Ahimsa).jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Interfaith Dialogue.jpg" align="center" height="200" width="250">
+  </td>
+
+
+</tr>
+
+
+ <tr>
+
+ <td><h2 align="center"><p id="pointescription"> **Community Engagement**</h2>: Get involved in community service and engagement. Indian traditions often emphasise the importance of giving back to the community, which aligns with the idea of fostering partnerships for development.</p>
+<br></h2></td>
+ <td><h2 align="center"> **Cultural Exchange**</h2>:<p id="pointescription"> Embrace cultural diversity and engage in cultural exchange activities. India is known for its rich cultural heritage, and learning about other cultures and traditions can promote global understanding and partnerships.</p>
+<br><br></br></p> 
+<td><h2 align="center">**Non-Violence (Ahimsa)**</h2>: <p id="pointescription">Practise non-violence and peaceful conflict resolution. Promoting peace and resolving disputes amicably is a fundamental principle of Indian traditions, and it contributes to building partnerships for a peaceful world.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Interfaith Dialogue**</h2>:<p id="pointescription"> Foster interfaith dialogue and understanding. India is a diverse country with multiple religions, and encouraging dialogue among different religious communities promotes tolerance and cooperation.</p>
+<br><br></br></td>
+ 
+</tr>
+<tr>
+  <td><img src="SDG 17 IMAGES\Yoga and Meditation.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Volunteering.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Philanthropy.jpg" align="center" height="200" width="250">
+  </td>
+
+  <td><img src="SDG 17 IMAGES\Education.jpg" align="center" height="200" width="250">
+  </td>
+
+  
+
+</tr>
+
+
+ <td><h2 align="center">**Yoga and Meditation**</h2>: <p id="pointescription">Explore practices like yoga and meditation, which originate from Indian traditions. These practices promote physical and mental well-being, contributing to the overall goal of sustainable development.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Volunteering**</h2>: <p id="pointescription">Engage in volunteer work, both locally and globally. Volunteering helps build partnerships and networks with individuals and organisations dedicated to various sustainable development goals.</p>
+<br><br></br></td>
+ <td><h2 align="center"> **Philanthropy**</h2>: <p id="pointescription">Cultivate a spirit of giving and philanthropy. Even small contributions can make a difference in the lives of those in need, and philanthropy is a key element of Indian traditions.</p>
+<br><br></br></td>
+<td> <h2 align="center"> **Education**</h2>:<p id="pointescription"> Prioritise education and lifelong learning. Education is a powerful tool for personal growth and development, and it also fosters global partnerships by connecting people with knowledge and information.</p>
+<br><br></br></td>
+</tr>
+</table>
+<h2>Dear friends,what action did you do today to achieve SDG today. Cooment here. Let's share our thoughts..</h2>
+<div class="comment-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+
+  <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="comment">Comment:</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="button" onclick="addComment()">Add Comment</button>
+  </form>
+</div>        
+<script>
+  function addComment() {
+      var name = document.getElementById('name').value;
+      var commentText = document.getElementById('comment').value;
+  
+      if (name && commentText) {
+          var commentContainer = document.getElementById('comments-container');
+  
+          var commentDiv = document.createElement('div');
+          commentDiv.classList.add('comment');
+  
+          var commentContent = document.createElement('p');
+          commentContent.textContent = name + ': ' + commentText;
+  
+          commentDiv.appendChild(commentContent);
+          commentContainer.appendChild(commentDiv);
+  
+          // Clear the form fields after adding a comment
+          document.getElementById('name').value = '';
+          document.getElementById('comment').value = '';
+      } else {
+          alert('Please enter both name and comment.');
+      }
+  }
+  
+      </script>
+</body>
+</html>
